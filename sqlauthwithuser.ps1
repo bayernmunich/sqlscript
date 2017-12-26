@@ -20,7 +20,7 @@ $SqlServer = New-Object Microsoft.SqlServer.Management.Smo.Server($SqlServer)
     #Select-Object Name, LoginType, Parent
  
 # create a new login
-$NewLogin = New-Object Microsoft.SqlServer.Management.Smo.Login($SqlServer, 'aniruddha')
+$NewLogin = New-Object Microsoft.SqlServer.Management.Smo.Login($SqlServer, 'sqladmin')
 $NewLogin.LoginType = [Microsoft.SqlServer.Management.Smo.LoginType]::SqlLogin
 $NewLogin.Create('P2ssw0rd@123')
 $NewLogin.AddToRole("sysadmin")
